@@ -1,0 +1,156 @@
+[
+    {
+        "product_id": 1,
+        "product_title": "SuperFast Laptop",
+        "product_image": "https://i.ibb.co.com/yBZtpgY/high-Laptop.jpg",
+        "category": "laptops",
+        "price": 999,
+        "description": "High-performance laptop with 16GB RAM and 512GB SSD.",
+        "Specification": [
+            "16GB RAM",
+            "512GB SSD",
+            "Intel i7"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 2,
+        "product_title": "Gaming Laptop Pro",
+        "product_image": "https://i.ibb.co.com/mvXBK5s/gaming-Laptop.jpg",
+        "category": "laptops",
+        "price": 1299,
+        "description": "High-end gaming laptop with powerful graphics card.",
+        "Specification": [
+            "32GB RAM",
+            "1TB SSD",
+            "RTX 3080"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 3,
+        "product_title": "UltraPortable Laptop",
+        "product_image": "https://i.ibb.co.com/sQJkW9P/Styles-Laptop.webp",
+        "category": "laptops",
+        "price": 899,
+        "description": "Lightweight laptop with long battery life.",
+        "Specification": [
+            "8GB RAM",
+            "256GB SSD",
+            "Intel i5"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 4,
+        "product_title": "Business Laptop",
+        "product_image": "https://i.ibb.co.com/R2n39SW/comfortable-Laptop.webp",
+        "category": "laptops",
+        "price": 1199,
+        "description": "Laptop with advanced security features for professionals.",
+        "Specification": [
+            "16GB RAM",
+            "512GB SSD",
+            "Intel vPro"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 5,
+        "product_title": "Budget Laptop",
+        "product_image": "https://i.ibb.co.com/YbrhxSC/portable-Laptop.jpg",
+        "category": "laptops",
+        "price": 599,
+        "description": "Affordable laptop for everyday tasks.",
+        "Specification": [
+            "4GB RAM",
+            "128GB SSD",
+            "Intel Celeron"
+        ],
+        "availability": true,
+        "rating": 4.2
+    },
+    {
+        "product_id": 6,
+        "product_title": "Workstation Laptop",
+        "product_image": "https://i.ibb.co.com/gMjg5rF/laptopL.jpg",
+        "category": "laptops",
+        "price": 1499,
+        "description": "High-performance laptop for creative professionals.",
+        "Specification": [
+            "64GB RAM",
+            "2TB SSD",
+            "NVIDIA Quadro"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 7,
+        "product_title": "Samsung Galaxy S24 Ultra",
+        "product_image": "https://i.ibb.co.com/GR92hVY/s24-ultra-black.png",
+        "category": "phones",
+        "price": 1299,
+        "description": "Smartphone with cutting-edge technology and sleek design.",
+        "Specification": [
+            "6.8-inch display",
+            "512GB storage",
+            "12GB RAM",
+            "200MP camera",
+            "5000mAh Battery"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 8,
+        "product_title": "Huawei Pura 70 Ultra",
+        "product_image": "https://i.ibb.co.com/ZXjRJ84/P70Ultra.jpg",
+        "category": "phones",
+        "price": 1656,
+        "description": "Compact smartphone with powerful performance.",
+        "Specification": [
+            "6.8-inch display",
+            "512GB storage",
+            "16GB RAM",
+            "50MP camera",
+            "5200mAh Battery"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 9,
+        "product_title": "FitSmart Watch",
+        "product_image": "https://i.ibb.co.com/rGk5Tky/smart-Watch1.jpg",
+        "category": "smart watches",
+        "price": 199,
+        "description": "Smartwatch with health and fitness tracking features.",
+        "Specification": [
+            "Heart rate monitor",
+            "GPS",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.2
+    },
+    {
+        "product_id": 10,
+        "product_title": "EliteSmart Watch",
+        "product_image": "https://i.ibb.co.com/r7BNcPg/smart-Watch2.jpg",
+        "category": "smart watches",
+        "price": 299,
+        "description": "Premium smartwatch with advanced features.",
+        "Specification": [
+            "ECG",
+            "Blood oxygen monitoring",
+            "NFC"
+        ],
+        "availability": true,
+        "rating": 4.7
+    }
+]
