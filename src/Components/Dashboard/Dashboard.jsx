@@ -1,5 +1,5 @@
 import React from 'react';
-import useTabTitle from '../Hooks/useTabTitle';
+import useTabTitle from '../../Hooks/useTabTitle';
 
 const Dashboard = () => {
     useTabTitle('Gadget Heaven | Dashboard');

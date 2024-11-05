@@ -125,6 +125,23 @@
     },
     {
         "product_id": 9,
+        "product_title": "Xiaomi 14 Ultra",
+        "product_image": "https://i.ibb.co.com/DbsNbj5/xiaomi14-Ultra.jpg",
+        "category": "phones",
+        "price": 1085,
+        "description": "Compact smartphone with powerful performance.",
+        "Specification": [
+            "6.73-inch display",
+            "512GB storage",
+            "16GB RAM",
+            "50MP camera",
+            "5000mAh Battery"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 10,
         "product_title": "FitSmart Watch",
         "product_image": "https://i.ibb.co.com/rGk5Tky/smart-Watch1.jpg",
         "category": "smart watches",
@@ -139,8 +156,23 @@
         "rating": 4.2
     },
     {
-        "product_id": 10,
-        "product_title": "EliteSmart Watch",
+        "product_id": 11,
+        "product_title": "FitSmart Watch ultra",
+        "product_image": "https://i.ibb.co.com/rGk5Tky/smart-Watch1.jpg",
+        "category": "smart watches",
+        "price": 299,
+        "description": "Smartwatch with health and fitness tracking features.",
+        "Specification": [
+            "Heart rate monitor",
+            "GPS",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 12,
+        "product_title": "EliteSmart Watch pro",
         "product_image": "https://i.ibb.co.com/r7BNcPg/smart-Watch2.jpg",
         "category": "smart watches",
         "price": 299,
