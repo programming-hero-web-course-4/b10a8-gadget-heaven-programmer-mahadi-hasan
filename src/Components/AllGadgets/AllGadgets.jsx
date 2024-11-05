@@ -19,7 +19,7 @@ const AllGadgets = () => {
         setActiveCategory(category);
     }
     return (
-        <div>
+        <div className='w-11/12 mx-auto'>
             <h1 className='text-[40px] font-bold text-center mb-12'>Explore Cutting-Edge Gadgets</h1>
             <div className='grid grid-cols-4 gap-6'>
                 {/* category buttons list */}

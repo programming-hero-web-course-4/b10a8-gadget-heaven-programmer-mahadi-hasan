@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <>
+        <div className='w-11/12 mx-auto'>
             <div className='bg-[#9538E2] rounded-b-xl'>
                 <div className='text-white flex justify-center items-center flex-col text-center space-y-8 pt-12 pb-64'>
                     <h1 className='text-6xl font-bold'>Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories</h1>
@@ -16,7 +16,7 @@ const Banner = () => {
                 <img className='h-[563px] w-full rounded-3xl' src={BannerImg} alt="Banner-Image" />
             </div>
 
-        </>
+        </div>
     );
 };
 

@@ -7,7 +7,7 @@ import useTabTitle from '../../Hooks/useTabTitle';
 const Root = () => {
     useTabTitle('Gadget Heaven')
     return (
-        <div className='w-11/12 mx-auto'>
+        <div>
             <Header></Header>
             <Outlet></Outlet>
             {/* <Footer></Footer> */}
