@@ -1,15 +1,27 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from "react";
 
 const Header = () => {
+    const location = useLocation();
+    useEffect(() => {
+        if (location.pathname === '/dashboard' || location.pathname === '/statistics') {
+            document.getElementById('navBar').style.backgroundColor = "white";
+            document.getElementById('navBar').style.color = "black";
+        }
+        else {
+            document.getElementById('navBar').style.backgroundColor = "#9538E2";
+            document.getElementById('navBar').style.color = "white";
+        }
+    }, [location])
     const Links = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
-        <li><NavLink to={'statistics'}>Statistics</NavLink></li>
-        <li><NavLink to={'dashboard'}>Dashboard</NavLink></li>
+        <li><NavLink to={'/statistics'}>Statistics</NavLink></li>
+        <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
     </>
     return (
-        <div className="navbar bg-[#9538E2] text-white rounded-t-xl">
+        <div id="navBar" className="navbar rounded-t-xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

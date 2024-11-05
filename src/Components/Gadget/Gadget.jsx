@@ -3,7 +3,7 @@ import React from 'react';
 const Gadget = ({ gadget }) => {
     const { product_title, product_image, price } = gadget;
     return (
-        <div className="bg-slate-100- shadow-xl p-5 rounded-2xl">
+        <div className="shadow-xl p-5 rounded-2xl">
             <div className='flex justify-center'>
                 <img className='h-52' src={product_image} alt={product_title} />
             </div>
