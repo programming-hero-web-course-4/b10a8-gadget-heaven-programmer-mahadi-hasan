@@ -53,10 +53,10 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 <div className="flex gap-4">
-                    <div className="text-black bg-white rounded-full p-3 flex justify-center items-center">
+                    <div className="text-black bg-white rounded-full p-3 flex justify-center items-center border cursor-pointer">
                         <FontAwesomeIcon icon={faCartShopping} />
                     </div>
-                    <div className="text-black bg-white rounded-full p-3 flex justify-center items-center">
+                    <div className="text-black bg-white rounded-full p-3 flex justify-center items-center border cursor-pointer">
                         <FontAwesomeIcon icon={faHeart} />
                     </div>
                 </div>
