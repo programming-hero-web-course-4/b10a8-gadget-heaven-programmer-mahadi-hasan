@@ -7,10 +7,12 @@ import useTabTitle from '../../Hooks/useTabTitle';
 const Root = () => {
     useTabTitle('Gadget Heaven')
     return (
-        <div>
+        <div className='flex flex-col min-h-screen'>
             <Header></Header>
-            <Outlet></Outlet>
-            {/* <Footer></Footer> */}
+            <div className='flex-grow'>
+                <Outlet></Outlet>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };

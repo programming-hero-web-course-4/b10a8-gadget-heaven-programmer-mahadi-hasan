@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -6,10 +6,13 @@ import { faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const ProductDetailPage = () => {
     const { productId } = useParams();
-    const id = Number(productId)
-    const data = useLoaderData()
+    const id = Number(productId);
+    const data = useLoaderData();
     const gadget = data.find(gadget => gadget.product_id === id);
     const { product_title, product_image, price, description, Specification, rating } = gadget;
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
     return (
         <div>
             {/* Heading */}
