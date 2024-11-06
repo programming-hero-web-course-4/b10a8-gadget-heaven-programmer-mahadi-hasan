@@ -36,7 +36,7 @@ For handling and managing data, we have used the **Context API**. The Context AP
 Check out the live website [here](#deadpan-beetle.surge.sh).
 
 ## Requirement Link
-Requirement Document Link:[here](#https://drive.google.com/file/d/1QELBVicJpKT0_yqliBpObkC5cP7qR8C1/view?usp=sharing).
+Requirement Document Link: https://drive.google.com/file/d/1QELBVicJpKT0_yqliBpObkC5cP7qR8C1/view?usp=sharing.
 
 ---
 
