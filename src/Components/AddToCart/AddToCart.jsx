@@ -1,12 +1,24 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../CartProvider/CartProvider';
-
+import Modal from '../Modal/Modal';
 const AddToCart = () => {
-    const { cart, setCart, removeFromCart, totalPrice } = useContext(CartContext)
+    const { cart, setCart, removeFromCart, totalPrice, setTotalPrice } = useContext(CartContext)
     const [sortedCart, setSortedCart] = useState(cart);
+    const [showModal, setShowModal] = useState(false);
+    useEffect(() => {
+        setSortedCart(cart)
+    }, [cart])
     const sortByPrice = () => {
         const sorted = [...sortedCart].sort((a, b) => b.price - a.price);
         setSortedCart(sorted)
+    }
+    const handlePurchase = () => {
+        setShowModal(true)
+    }
+    const closeModal = () => {
+        setShowModal(false)
+        setCart([])
+        setTotalPrice(0)
     }
     return (
         <div className='w-10/12 mx-auto mt-12'>
@@ -15,7 +27,7 @@ const AddToCart = () => {
                 <div className='flex items-center gap-x-5'>
                     <h3 className='text-2xl font-bold'>Total Price:${totalPrice.toFixed(2)}</h3>
                     <button onClick={sortByPrice} className="btn btn-outline rounded-full btn-secondary">Sort by Price</button>
-                    <button className="btn btn-active rounded-full btn-secondary">Purchase</button>
+                    <button onClick={handlePurchase} className="btn btn-active rounded-full btn-secondary">Purchase</button>
                 </div>
             </div>
             {
@@ -48,6 +60,7 @@ const AddToCart = () => {
                     </div>
                 ))
             }
+            <Modal showModal={showModal} closeModal={closeModal}></Modal>
         </div>
     );
 };
