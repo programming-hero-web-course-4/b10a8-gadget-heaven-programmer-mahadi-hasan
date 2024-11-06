@@ -33,7 +33,7 @@ For handling and managing data, we have used the **Context API**. The Context AP
 - **Total Price Calculation**: Dynamically updates the total price based on items in the cart.
 
 ## Live Website
-Check out the live website [here](#deadpan-beetle.surge.sh).
+Check out the live website [here](deadpan-beetle.surge.sh).
 
 ## Requirement Link
 Requirement Document Link: https://drive.google.com/file/d/1QELBVicJpKT0_yqliBpObkC5cP7qR8C1/view?usp=sharing.
