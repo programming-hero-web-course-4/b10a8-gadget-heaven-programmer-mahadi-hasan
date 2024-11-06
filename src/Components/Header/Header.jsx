@@ -1,10 +1,12 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { CartContext } from "../CartProvider/CartProvider";
 
 const Header = () => {
     const location = useLocation();
+    const { cart, wishlist } = useContext(CartContext)
     useEffect(() => {
         if (location.pathname === '/dashboard' || location.pathname === '/statistics' || location.pathname.includes('/products/')) {
             document.getElementById('navBar').style.backgroundColor = "white";
@@ -53,11 +55,13 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 <div className="flex gap-4">
-                    <div className="text-black bg-white rounded-full p-3 flex justify-center items-center border cursor-pointer">
+                    <div className="btn text-black bg-white rounded-full p-3 flex justify-center items-center border">
                         <FontAwesomeIcon icon={faCartShopping} />
+                        <div className="badge badge-secondary">{cart.length}</div>
                     </div>
-                    <div className="text-black bg-white rounded-full p-3 flex justify-center items-center border cursor-pointer">
+                    <div className="btn text-black bg-white rounded-full p-3 flex justify-center items-center border">
                         <FontAwesomeIcon icon={faHeart} />
+                        <div className="badge badge-secondary">{wishlist.length}</div>
                     </div>
                 </div>
             </div>

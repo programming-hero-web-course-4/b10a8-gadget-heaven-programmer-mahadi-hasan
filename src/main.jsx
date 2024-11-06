@@ -11,6 +11,7 @@ import Home from './Components/Home/Home.jsx';
 import Statistics from './Components/Statistics/Statistics.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import ProductDetailPage from './Components/ProductDetailPage/ProductDetailPage.jsx';
+import { CartProvider } from './Components/CartProvider/CartProvider.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>,
 )

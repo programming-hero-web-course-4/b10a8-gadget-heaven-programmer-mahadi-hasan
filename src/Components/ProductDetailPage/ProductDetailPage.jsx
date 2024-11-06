@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { CartContext } from '../CartProvider/CartProvider';
 
 
 const ProductDetailPage = () => {
@@ -10,6 +11,15 @@ const ProductDetailPage = () => {
     const data = useLoaderData();
     const gadget = data.find(gadget => gadget.product_id === id);
     const { product_title, product_image, price, description, Specification, rating } = gadget;
+    const { addToCart, cart, addToWishlist, wishlist } = useContext(CartContext);
+    const [isWishlisted, setIsWishlisted] = useState(wishlist.some(list => list.product_id === gadget.product_id))
+    const handleAddToCart = () => {
+        addToCart(gadget)
+    }
+    const handleAddToWishlist = () => {
+        addToWishlist(gadget)
+        setIsWishlisted(true)
+    }
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [id]);
@@ -53,11 +63,11 @@ const ProductDetailPage = () => {
                         <div className="badge badge-lg">{rating}</div>
                     </div>
                     <div className='flex gap-6 items-center mt-6'>
-                        <button className='btn text-white rounded-full bg-[#9538E2]'>
+                        <button onClick={handleAddToCart} className='btn text-white rounded-full bg-[#9538E2]' disabled={cart.some(item => item.product_id === gadget.product_id)}>
                             Add To Card
                             <FontAwesomeIcon icon={faCartShopping} />
                         </button>
-                        <button className='btn btn-outline bg-white rounded-full'>
+                        <button onClick={handleAddToWishlist} className='btn btn-outline bg-white rounded-full' disabled={isWishlisted}>
                             <FontAwesomeIcon icon={faHeart} />
                         </button>
                     </div>
