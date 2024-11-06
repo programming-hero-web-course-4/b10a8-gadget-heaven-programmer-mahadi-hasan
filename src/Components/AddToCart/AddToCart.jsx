@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../CartProvider/CartProvider';
 import Modal from '../Modal/Modal';
+import { useNavigate } from 'react-router-dom';
 const AddToCart = () => {
     const { cart, setCart, removeFromCart, totalPrice, setTotalPrice } = useContext(CartContext)
     const [sortedCart, setSortedCart] = useState(cart);
     const [showModal, setShowModal] = useState(false);
+    const navigate = useNavigate();
     useEffect(() => {
         setSortedCart(cart)
     }, [cart])
@@ -19,6 +21,7 @@ const AddToCart = () => {
         setShowModal(false)
         setCart([])
         setTotalPrice(0)
+        navigate('/')
     }
     return (
         <div className='w-10/12 mx-auto mt-12'>
@@ -27,7 +30,7 @@ const AddToCart = () => {
                 <div className='flex items-center gap-x-5'>
                     <h3 className='text-2xl font-bold'>Total Price:${totalPrice.toFixed(2)}</h3>
                     <button onClick={sortByPrice} className="btn btn-outline rounded-full btn-secondary">Sort by Price</button>
-                    <button onClick={handlePurchase} className="btn btn-active rounded-full btn-secondary">Purchase</button>
+                    <button onClick={handlePurchase} className="btn btn-active rounded-full btn-secondary" disabled={totalPrice === 0}>Purchase</button>
                 </div>
             </div>
             {

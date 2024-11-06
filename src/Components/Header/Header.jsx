@@ -8,7 +8,7 @@ const Header = () => {
     const location = useLocation();
     const { cart, wishlist } = useContext(CartContext)
     useEffect(() => {
-        if (location.pathname === '/dashboard' || location.pathname === '/statistics' || location.pathname.includes('/products/')) {
+        if (location.pathname === '/dashboard' || location.pathname === '/offers-deals' || location.pathname === '/statistics' || location.pathname.includes('/products/')) {
             document.getElementById('navBar').style.backgroundColor = "white";
             document.getElementById('navBar').style.color = "black";
         }
@@ -21,6 +21,7 @@ const Header = () => {
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/statistics'}>Statistics</NavLink></li>
         <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
+        <li><NavLink to={'/offers-deals'}>Offers & Deals</NavLink></li>
     </>
     return (
         <div id="navBar" className="navbar rounded-t-xl w-11/12 mx-auto">
